@@ -6,7 +6,7 @@ public class MyBot {
 
     public static void main(final String[] args) {
         final Networking networking = new Networking();
-        final GameMap gameMap = networking.initialize("Tamagocchi");
+        final GameMap gameMap = networking.initialize("Durt-theBot v1");
 
         // We now have 1 full minute to analyse the initial map.
         final String initialMapIntelligence =
@@ -36,7 +36,7 @@ public class MyBot {
                         break;
                     }
 
-                    final ThrustMove newThrustMove = Navigation.navigateShipToDock(gameMap, ship, planet, Constants.MAX_SPEED/2);
+                    final ThrustMove newThrustMove = Navigation.navigateShipToDock(gameMap, ship, planet, Constants.MAX_SPEED/7);
                     if (newThrustMove != null) {
                         moveList.add(newThrustMove);
                     }
